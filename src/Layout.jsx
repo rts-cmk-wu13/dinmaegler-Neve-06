@@ -5,6 +5,7 @@ import "./styles/reset.scss"
 import "./styles/responsivness.scss"
 import "./styles/logo.scss"
 import "./styles/family.scss"
+import "./styles/homeapartments.scss"
 
 function App() {
  
