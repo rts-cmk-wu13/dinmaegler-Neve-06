@@ -1,6 +1,10 @@
 
 import { Outlet } from 'react-router'
 import Header from './Components/Header'
+import "./styles/reset.scss"
+import "./styles/responsivness.scss"
+import "./styles/logo.scss"
+import "./styles/family.scss"
 
 function App() {
  
@@ -12,7 +16,6 @@ function App() {
         <Outlet />
       </main>
       <footer>
-        <small>© 2023 My App</small>
       </footer>
     </>
   )
