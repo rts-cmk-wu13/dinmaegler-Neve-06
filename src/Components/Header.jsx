@@ -9,13 +9,14 @@ export default function Header() {
 
     return (
         <header>
-        <h1>My App</h1>
-        { location.pathname !== "/login" && (
-            <>
-                <Navigation />
-                <LogoutButton />
-            </>
-        )}
-      </header>
+            {location.pathname !== "/login" && (
+                <>            
+                    <p>4000@dinmaegler.com</p>
+                    <p>+45 7070 4000</p>
+                    <LogoutButton />
+                    <Navigation />
+                </>
+            )}
+        </header>
     )
 }
