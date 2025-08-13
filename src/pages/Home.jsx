@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router"
 import Hero from "../Components/Hero"
 import Family from "../Components/Family"
-import Boliger from "../Components/Boliger"
+import HomepageApartments from "../Components/HomepageApartments"
 
 export default function Home() {
 
@@ -9,7 +9,7 @@ export default function Home() {
         <>
             <Hero />
             <Family/>
-            <Boliger/>
+            <HomepageApartments/>
         </>
     )
 }
