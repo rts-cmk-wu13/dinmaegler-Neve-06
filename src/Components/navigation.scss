@@ -1,10 +1,13 @@
 .navigation {
   display: flex;
-  padding: 10px 20px;
-  background-color: #162A41;
+  background-color: white;
+  color: #333333;
+  justify-content: space-between;
+  //  #162A41;
 
-  & a.active {
+  & a {
     font-weight: bold;
     text-decoration: none;
+    color: #333333;
   }
 }
