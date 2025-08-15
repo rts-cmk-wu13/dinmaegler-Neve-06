@@ -1,20 +1,22 @@
 import { useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router";
-import { useAuth } from "../contexts/AuthContext";
-
+import "../api/homes.js"
+import { getHomes } from "../api/homes.js";
 
 export default function List() {
-    const usrs = useLoaderData();
-    const {token } = useAuth()
-
-    console.log(token)
+    const homes = useLoaderData();
 
     return (
 
         <ul>
-            {usrs.map(user => (
-                <li key={user.id}>
-                    <Link to={`/list/${user.id}`}>{user.name}</Link>
+            {homes.map(home => (
+                <li className="home__li" key={home.id}>
+                    <Link to={`/list/${home.id}`}>
+                    {/* <p>{home.adress1}</p> */}
+                    <figure className="home__figure">
+                    <img src={home.images[0]?.formats?.thumbnail?.url} alt={home.name} />
+                    </figure>
+                    </Link>
                 </li>
             ))}
         </ul>
