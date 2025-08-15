@@ -5,7 +5,6 @@ import Footer from './Components/Footer'
 import "./styles/reset.scss"
 import "./styles/responsivness.scss"
 import "./styles/logo.scss"
-import "./styles/family.scss"
 import "./styles/homeapartments.scss"
 import "./styles/footer.scss"
 
