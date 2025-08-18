@@ -5,42 +5,48 @@ import List from "./pages/List";
 import Detail from "./pages/Detail";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
-import { getUser, getUsers } from "./api/typicode";
+import Agents from "./pages/Agents";
 import Loading from "./Components/Loading";
 import { ErrorBoundary } from "./Components/Error";
 import { handleSubmit } from "./api/actions";
 import Login from "./pages/Login";
 import RequireAuth from "./Components/RequireAuth";
+import { getHomes, getHome, fourHomes } from "./api/homes";
+import { getAgents, getAgent, threeAgents } from "./api/agents";
+import { homeLoader } from "./api/homeloader";
 
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <Layout />,
+        element: <Layout />,    
         hydrateFallbackElement: <Loading />,
         errorElement: <ErrorBoundary />,
         children: [
             {
                 index: true,
-                element: <Home />
+                element: <Home />,
+                loader: homeLoader
             },
             {
                 path: "list",
-                element: (
-                    <RequireAuth>
-                        <List />
-                    </RequireAuth>
-                ),
-                loader: getUsers,
+                element: <List />,
+                loader: getHomes
+            },
+            {
+                path: "agents",
+                element: <Agents/>,
+                loader: getAgents
             },
             {
                 path: "list/:id",
-                element: (
-                <RequireAuth>
-                    <Detail />
-                </RequireAuth>
-                ),
-                loader: getUser
+                element: 
+                <Detail />,
+                loader: getHome
+            },
+            {
+                path: "agents/:id",
+                
             },
             {
                 path: "contact",
