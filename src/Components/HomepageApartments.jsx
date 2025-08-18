@@ -1,22 +1,9 @@
 import { useEffect, useState } from "react"
+import { useLoaderData, Link } from "react-router";
 
-export default function Boliger() {
+export default function HomepageApartments() {
 
-  const [homes, setHomes] = useState([]);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    fetch("https://dinmaegler.onrender.com/homes?_limit=4&_start=2")
-      .then((response) => {
-        if (!response.ok) throw new Error("Network response not ok");
-        return response.json();
-      })
-      .then((data) => setHomes(data))
-      .catch((err) => {
-        console.error(err);
-        setError("Could not fetch homes.");
-      });
-  }, []);
+  const {homes} = useLoaderData()
 
   return (
     <>
@@ -40,9 +27,7 @@ export default function Boliger() {
           <p>{home.price}</p>
       </div>
     ))}
-      <button className="no-columns">se alle boliger</button>
-
-      {error && <p className="text-red-500">{error}</p>}
+      <Link to="list" className="no-columns"><button>se alle boliger</button></Link>
     </section>
     </>
   );
