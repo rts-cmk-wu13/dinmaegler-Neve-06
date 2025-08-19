@@ -1,0 +1,114 @@
+#root{
+    display: grid;
+    grid-template-columns: [fullw-start] 1.5rem [content-start] 1fr [content-end] 1.5rem [fullw-end];
+
+}
+
+
+@media screen and (width >=64rem) {
+    #root {
+        grid-template-columns:
+            [fullw-start] 1fr [content-start] repeat(6, 10rem) [content-end] 1fr [fullw-end];
+    }
+
+// Family
+.family{
+grid-column: span 3;
+padding: 2.5rem;
+}
+.family__side{
+    grid-column: span 3;
+    padding: 2.5rem;
+}
+.family__side{
+    grid-column: span 3;
+    padding: 2.5rem;
+
+}
+.family__under-grid{
+    padding: 1rem;
+}
+.family__undergrid-section{
+    grid-column: span 2;
+    padding: 1rem;
+}
+// Chosen
+.chosen__card{
+    grid-column: span 3;
+}
+.chosen__figure{
+    height: 20rem;
+}
+// Agent
+.agent__container{
+    grid-column: span 2;
+    padding: 1rem;
+}
+// Footer
+.footer__section{
+    grid-column: span 3;
+}
+//List 
+.home__figure{
+    height: 15rem;
+}
+.home__li{
+    grid-column: span 3;
+    padding: 1rem;
+}
+//Detail
+.description__container{
+    grid-column: span 3;
+    padding: 2rem;
+}
+.logo__container{
+    margin: 2rem;
+}
+.template{
+    grid-column: span 2;
+    margin-inline: auto;
+}
+}
+
+#root > header, #root > main, #root > footer{
+    grid-column: fullw;
+    display: grid;
+    grid-template-columns: subgrid;
+}
+
+
+header,
+main,
+footer {
+    grid-column: fullw;
+    display: grid;
+    grid-template-columns: subgrid;
+}
+
+header>*,
+main>*,
+footer>* {
+    grid-column: content;
+    display: grid;
+    grid-template-columns: subgrid;
+}
+
+.full-width{
+    grid-column: fullw-start / fullw-end;
+
+}
+
+
+.columns {
+    grid-column: content;
+    display: grid;
+    grid-template-columns: subgrid;
+    gap: 1.5rem;
+    padding-top: 2rem;
+}
+
+.no-columns {
+    grid-column: content;
+    display: block;
+    text-align: center;
+}
