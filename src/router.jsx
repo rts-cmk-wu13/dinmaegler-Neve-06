@@ -6,6 +6,7 @@ import Detail from "./pages/Detail";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import Agents from "./pages/Agents";
+import Agent from "./pages/Agent";
 import Loading from "./Components/Loading";
 import { ErrorBoundary } from "./Components/Error";
 import { handleSubmit } from "./api/actions";
@@ -46,7 +47,8 @@ const router = createBrowserRouter([
             },
             {
                 path: "agents/:id",
-                
+                element: <Agent />,
+                loader: getAgent
             },
             {
                 path: "contact",
