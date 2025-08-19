@@ -16,7 +16,8 @@ export default function HomepageApartments() {
       </section>
     <section> 
     {homes.map((home) => (
-      <div className="chosen__card" key={home.id}>
+      <Link to={`/list/${home.id}`} className="chosen__card" key={home.id}>
+      <div>
         <figure className="chosen__figure">
         <img src={home.images[0]?.formats?.thumbnail?.url} alt={home.title}/>
         </figure>
@@ -26,6 +27,7 @@ export default function HomepageApartments() {
           <p>{home.rooms}</p>
           <p>{home.price}</p>
       </div>
+      </Link>
     ))}
       <Link to="list" className="no-columns"><button>se alle boliger</button></Link>
     </section>
