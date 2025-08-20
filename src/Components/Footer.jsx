@@ -8,11 +8,14 @@ export default function Footer() {
         <>
             <footer >
                 <section>
-                    <section className="no-columns">
+                    <section className="footer__logo">
                         <figure className="logo__container">
                         <img src={logo} alt="logo" />
                         </figure>
                         <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.</p>
+                    </section>
+                    <section>
+
                     </section>
                     <section className="footer__section">
                         <FaPhoneAlt />
