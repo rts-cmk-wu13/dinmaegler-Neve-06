@@ -1,6 +1,7 @@
 import { MdMail } from "react-icons/md";
 import { FaLinkedinIn } from "react-icons/fa";
 import { useLoaderData } from "react-router";
+import { Link } from "react-router";
 
 export default function HomepageAgents() {
 
@@ -26,6 +27,7 @@ export default function HomepageAgents() {
             <FaLinkedinIn />
           </div>
         ))}
+        <Link to="/agents" className="no-columns"><button>Se alle Mælgere</button></Link>
       </section>
     </>
   )
