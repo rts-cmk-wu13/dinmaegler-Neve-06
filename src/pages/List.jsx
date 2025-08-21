@@ -1,7 +1,5 @@
-import { useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router";
 import "../api/homes.js"
-import { getHomes } from "../api/homes.js";
 
 export default function List() {
     const homes = useLoaderData();
