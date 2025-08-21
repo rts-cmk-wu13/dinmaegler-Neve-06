@@ -17,7 +17,7 @@ export default function HomepageAgents() {
       </section>
       <section>
         {agents.map((agent) => (
-          <div className="agent__container" key={agent.id}>
+          <div className="agent__container-home" key={agent.id}>
             <figure className="agent__figure">
               <img src={agent.image?.formats?.thumbnail?.url} alt={agent.name} />
             </figure>
