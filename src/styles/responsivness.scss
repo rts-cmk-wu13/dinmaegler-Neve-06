@@ -8,65 +8,112 @@
 @media screen and (width >=64rem) {
     #root {
         grid-template-columns:
-            [fullw-start] 1fr [content-start] repeat(6, 10rem) [content-end] 1fr [fullw-end];
+            [fullw-start] 1fr [content-start] repeat(12, 6rem) [content-end] 1fr [fullw-end];
     }
+
+
+.header__container{
+    background-color: #162A41;
+    
+    display: flex;
+gap: 1rem;
+color: white;
+    align-items: center;
+}
 
 // Family
 .family{
-grid-column: span 3;
+grid-column: span 6;
 padding: 2.5rem;
 }
 .family__side{
-    grid-column: span 3;
+    grid-column: span 6;
     padding: 2.5rem;
 }
-.family__side{
-    grid-column: span 3;
-    padding: 2.5rem;
 
-}
 .family__under-grid{
     padding: 1rem;
 }
 .family__undergrid-section{
-    grid-column: span 2;
+    grid-column: span 4;
     padding: 1rem;
 }
 // Chosen
 .chosen__card{
-    grid-column: span 3;
+    grid-column: span 6;
 }
 .chosen__figure{
     height: 20rem;
 }
 // Agent
-.agent__container{
-    grid-column: span 2;
+.agent__container-home{
+    grid-column: span 4;
     padding: 1rem;
 }
 // Footer
 .footer__section{
-    grid-column: span 3;
+    grid-column: span 6;
+}
+.footer__logo{
+    grid-column: span 6;
 }
 //List 
 .home__figure{
     height: 15rem;
 }
 .home__li{
-    grid-column: span 3;
+    grid-column: span 6;
     padding: 1rem;
 }
 //Detail
 .description__container{
-    grid-column: span 3;
+    grid-column: span 6;
     padding: 2rem;
 }
 .logo__container{
     margin: 2rem;
 }
-.template{
-    grid-column: span 2;
+.home__info{
+    grid-column: span 4;
     margin-inline: auto;
+}
+// Agentlist
+.agent__li{
+    grid-column: span 4;
+    padding: 1rem;
+}
+.agent__figure-list{
+    grid-column: span 4;
+}
+
+
+// Agent
+.agent__figure-detail{
+    grid-column: span 4;
+    padding-top: 3rem;
+    padding-left: 3rem;
+}
+
+.agent__container{
+    grid-column: span 8;
+
+    
+}
+.agent__section{
+    grid-column: span 4;
+    padding: 3rem;
+}
+.agent__description{
+    grid-column: span 8;
+    padding: 3rem;
+}
+.agent__contact{
+    grid-column: span 8;
+    padding-inline: 3rem;
+}
+.agent__contact-text{
+    grid-column: span 3;
+    padding: 1rem;
 }
 }
 
