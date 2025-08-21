@@ -7,6 +7,7 @@ import "./styles/responsivness.scss"
 import "./styles/logo.scss"
 import "./styles/homeapartments.scss"
 import "./styles/footer.scss"
+import "./styles/buttons.scss"
 
 function App() {
  
