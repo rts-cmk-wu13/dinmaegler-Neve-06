@@ -29,7 +29,7 @@ export default function HomepageApartments() {
       </div>
       </Link>
     ))}
-      <Link to="list" className="no-columns"><button>se alle boliger</button></Link>
+      <Link to="list" className="no-columns"><button className="home__button">se alle boliger</button></Link>
     </section>
     </>
   );

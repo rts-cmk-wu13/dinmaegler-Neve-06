@@ -27,7 +27,7 @@ export default function HomepageAgents() {
             <FaLinkedinIn />
           </div>
         ))}
-        <Link to="/agents" className="no-columns"><button>Se alle Mælgere</button></Link>
+        <Link to="/agents" className="no-columns"><button className="home__button">Se alle Mælgere</button></Link>
       </section>
     </>
   )
