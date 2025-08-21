@@ -10,12 +10,13 @@ export default function Header() {
     return (
         <header>
             {location.pathname !== "/login" && (
-                <>            
+                <>      
+                <nav className="header__container full-width">  
                     <p>4000@dinmaegler.com</p>
-                    <p>+45 7070 4000</p>
+                    <p>+45 7070 4000</p>     </nav>   
                     <LogoutButton />
                     <Navigation />
-                </>
+            </>
             )}
         </header>
     )
