@@ -13,8 +13,9 @@ export default function Header() {
                 <>      
                 <nav className="header__container full-width">  
                     <p>4000@dinmaegler.com</p>
-                    <p>+45 7070 4000</p>     </nav>   
+                    <p>+45 7070 4000</p>     
                     <LogoutButton />
+                    </nav>   
                     <Navigation />
             </>
             )}
