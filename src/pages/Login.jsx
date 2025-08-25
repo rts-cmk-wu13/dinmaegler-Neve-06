@@ -21,7 +21,7 @@ export default function Login() {
         console.log(data)
         // validér her...
 
-        const response = await fetch("https://dummyjson.com/auth/login", {
+        const response = await fetch("https://dinmaegler.onrender.com/auth/local", {
             method: "POST",
             headers: { 
                 "Content-Type": "application/json"
@@ -44,9 +44,9 @@ export default function Login() {
 
     return (
         <Form onSubmit={handleLogin}>
-            <div className="formgroup">
-                <label htmlFor="username">Username</label>
-                <input type="text" name="username" id="username" />
+             <div className="formgroup">
+                <label htmlFor="email">Email</label>
+                <input type="email" name="email" placeholder="Indtast email" />
             </div>
             <div className="formgroup">
                 <label htmlFor="password">Password</label>
