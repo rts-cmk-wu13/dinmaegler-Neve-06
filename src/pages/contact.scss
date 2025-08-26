@@ -3,17 +3,22 @@
 .formgroup {
     display: flex;
     flex-direction: column;
-
     &__label {
-        color: orange
+        color: black
     }
-
     .error {
         color: red
     }
-
     .error:empty {
         display: none;
     }
+}
+input{
+    padding: 0.5rem;
+}
 
+.textarea__size{
+   
+    resize: none;
+    min-height: 10rem;
 }
