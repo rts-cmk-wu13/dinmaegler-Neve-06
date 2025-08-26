@@ -36,24 +36,29 @@ export default function Login() {
         if(!response.ok) {
             setError(userdata.message || userdata.error || "Please provide login credentials")
         } else {
-            login(userdata.accessToken)
+            login(userdata.jwt)
             navigate(from, { replace: true })
         }
 
     }
 
     return (
+        <>
+        <div>
+            <h1 className="login__title">Log ind på din konto</h1>
+        </div>
         <Form onSubmit={handleLogin}>
              <div className="formgroup">
                 <label htmlFor="email">Email</label>
-                <input type="email" name="email" placeholder="Indtast email" />
+                <input type="email" name="identifier" placeholder="Email" />
             </div>
             <div className="formgroup">
                 <label htmlFor="password">Password</label>
-                <input type="password" name="password" id="password" />
+                <input type="password" name="password" id="password" placeholder="Password" />
             </div>
             {error && (<div>{error}</div>)}
-            <button type="submit">Log in</button>
+            <button className="home__button" type="submit">Log in</button>
         </Form>
+        </>
     )
 }

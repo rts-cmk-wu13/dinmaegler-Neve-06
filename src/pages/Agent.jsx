@@ -23,7 +23,7 @@ export default function Agent() {
         </article>
         <section className="agent__contact">
             <p className="agent__contact-text">Kontakt {agent.name}</p>
-        {/* <Contact/> */}
+        <Contact/>
         </section>
         </>
     )
