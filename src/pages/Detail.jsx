@@ -1,4 +1,8 @@
 import { useLoaderData } from "react-router"
+import { AiTwotonePicture } from "react-icons/ai";
+import { FaLocationDot, FaHeart  } from "react-icons/fa6";
+import { IoLayersOutline } from "react-icons/io5";
+
 
 export default function Detail() {
     const home = useLoaderData(); // indlæs data fra loader funktion
@@ -6,34 +10,37 @@ export default function Detail() {
     return (
         <>
             <img className="full-width" src={home.images[0]?.formats?.thumbnail?.url} alt={home.name} />
-            <section>
-                <h2>{home.adress1}</h2>
+            <section className="home__info-top">
                 <section>
+                <h2>{home.adress1}</h2>
                     <p>{home.city}</p>
                     <p>{home.postalcode}</p>
                 </section>
                 <section>
-
+                    <AiTwotonePicture size={45}/>
+                    <IoLayersOutline size={45}/>
+                    <FaLocationDot size={45}/>
+                    <FaHeart size={45}/>
                 </section>
                 <section>
                     <p>Kr. {home.price}</p>
                 </section>
             </section>
             <div className="">
-                <div className="template">
+                <div className="home__info">
                     <p>Sagsnummer:{home.id}</p>
                     <p>Boligareal:{home.width}</p>
                     <p>Grundareal:{home.lotsize}</p>
                     <p>Rum/værelser:{home.rooms}</p>
                     <p>Antal Plan:{home.livingspace}</p>
                 </div>
-                <div className="template">
+                <div className="home__info">
                     <p>Kælder:{home.basementsize}</p>
                     <p>Byggeår:{home.built}</p>
                     <p>Ombygget:{home.remodel}</p>
                     <p>Energimærke:{home.energylabel}</p>   
                 </div>
-                <div className="template">
+                <div className="home__info">
 
                     <p>udbetaing:{home.price}</p>
                     <p>Brutto ex ejerudgif:{home.gross}</p>
