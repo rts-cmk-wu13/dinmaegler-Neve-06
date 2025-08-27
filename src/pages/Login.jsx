@@ -1,6 +1,7 @@
 import { Form, useLocation, useNavigate } from "react-router"
 import { useAuth } from "../contexts/AuthContext"
 import { useState } from "react";
+import "./contact.scss"
 
 export default function Login() {
     const [error, setError] = useState();
@@ -48,11 +49,11 @@ export default function Login() {
             <h1 className="login__title">Log ind på din konto</h1>
         </div>
         <Form onSubmit={handleLogin}>
-             <div className="formgroup">
+             <div className="formgroup__login">
                 <label htmlFor="email">Email</label>
                 <input type="email" name="identifier" placeholder="Email" />
             </div>
-            <div className="formgroup">
+            <div className="formgroup__login">
                 <label htmlFor="password">Password</label>
                 <input type="password" name="password" id="password" placeholder="Password" />
             </div>
