@@ -3,7 +3,7 @@ import Layout from "./Layout";
 import Home from "./pages/Home";
 import List from "./pages/List";
 import Detail from "./pages/Detail";
-import Contact from "./pages/Contact";
+import Contactpage from "./pages/Contactpage";
 import NotFound from "./pages/NotFound";
 import Agents from "./pages/Agents";
 import Agent from "./pages/Agent";
@@ -52,7 +52,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "contact",
-                element: <Contact />,
+                element: <Contactpage />,
                 action: handleSubmit,
             },
             {
