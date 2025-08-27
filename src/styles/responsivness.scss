@@ -136,6 +136,9 @@ padding: 2.5rem;
 .login__title h1{
     text-align: center;
 }
+.formgroup__login{
+    grid-column: span 5 / 9;
+}
 }
 
 #root > header, #root > main, #root > footer{

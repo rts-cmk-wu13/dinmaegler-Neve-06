@@ -22,3 +22,8 @@ input{
     resize: none;
     min-height: 10rem;
 }
+
+.formgroup__login{
+    display: flex;
+    flex-direction: column;
+}
