@@ -1,11 +1,13 @@
 import { useLoaderData } from "react-router"
 import Contact from "./Contact"
+import banner from "../img/banner.png"
 
 export default function Agent() {
 
     const agent = useLoaderData()
     return (
         <>
+        <img className="full-width" src={banner} alt="banner" />
         <article className="agent__container">
             <figure className="agent__figure-detail">
             <img src={agent.image?.formats?.thumbnail.url} alt={agent.name} />

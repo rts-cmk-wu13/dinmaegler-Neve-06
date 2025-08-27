@@ -1,11 +1,14 @@
 import { Link, useLoaderData } from "react-router";
 import "../api/homes.js"
+import banner from "../img/banner.png"
+
 
 export default function List() {
     const homes = useLoaderData();
 
     return (
-
+        <>
+        <img className="full-width" src={banner} alt="banner" />
         <ul>
             {homes.map(home => (
                 <li className="home__li" key={home.id}>
@@ -20,6 +23,7 @@ export default function List() {
                 </li>
             ))}
         </ul>
+        </>
         
     )
 }
