@@ -33,6 +33,7 @@ export default function Footer() {
                         <Link to="list">Boliger til salg</Link>
                         <Link to="agents">Mæglere</Link>
                         <Link to="contact">Kontakt os</Link>
+                        <Link to="login">Log ind</Link>
                     </section>
                 </section>
                 <section className="footer__bottom full-width">
