@@ -15,6 +15,7 @@ import RequireAuth from "./Components/RequireAuth";
 import { getHomes, getHome, fourHomes } from "./api/homes";
 import { getAgents, getAgent, threeAgents } from "./api/agents";
 import { homeLoader } from "./api/homeloader";
+import Favorites from "./pages/Favorites";
 
 
 const router = createBrowserRouter([
@@ -50,7 +51,7 @@ const router = createBrowserRouter([
                 element: <Agent />,
                 loader: getAgent
             },
-            {
+            {   
                 path: "contact",
                 element: <Contactpage />,
                 action: handleSubmit,
@@ -59,8 +60,12 @@ const router = createBrowserRouter([
                 path: "login",
                 element: <Login />
             },
-            {   
-                path: "*",  
+            {
+                path: "favorites",
+                element: <Favorites />,
+            },
+            {
+                path: "*",
                 element: <NotFound />
             } 
         ]
