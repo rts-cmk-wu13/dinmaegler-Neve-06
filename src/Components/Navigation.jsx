@@ -1,9 +1,13 @@
 import { NavLink } from "react-router"
 import './navigation.scss'
 import logo from '../img/logo.svg'
-export default function Navigation() {
+import { useAuth } from "../contexts/AuthContext"
 
-    return (
+export default function Navigation() {
+    const { token } = useAuth();
+
+
+    return token ?(
         <nav className="navigation">
             <NavLink to="/">
                 <figure className="logo">
@@ -12,9 +16,20 @@ export default function Navigation() {
             </NavLink>
             <NavLink to="/list">Boliger til salg</NavLink>
             <NavLink to="/agents">Mælgere</NavLink>
-
+            <NavLink to="/favorites">Mine Favoritter</NavLink>
             <NavLink to="/contact">Kontakt os</NavLink>
 
         </nav>
-    )
+    ) : <nav className="navigation">
+            <NavLink to="/">
+                <figure className="logo">
+                    <img src={logo} alt="logo" />
+                </figure>
+            </NavLink>
+            <NavLink to="/list">Boliger til salg</NavLink>
+            <NavLink to="/agents">Mælgere</NavLink>
+            <NavLink to="/contact">Kontakt os</NavLink>
+
+        </nav>
 }
+
