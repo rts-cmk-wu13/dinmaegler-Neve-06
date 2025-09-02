@@ -61,8 +61,9 @@ const router = createBrowserRouter([
                 element: <Login />
             },
             {
+                
                 path: "favorites",
-                element: <Favorites />,
+                element:  <RequireAuth><Favorites /></RequireAuth>,
             },
             {
                 path: "*",
