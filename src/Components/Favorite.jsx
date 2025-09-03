@@ -25,6 +25,12 @@ export default function Favorite() {
               <p>{home.postalcode} {home.city}</p>
               <p>{home.type} Ejerudgift: {home.netto}</p>
               </div>
+              <div  className="favorites__details">
+                <p>{home.energylabel}</p>
+                <p>{home.rooms}</p>
+                <p>{home.size}m^2</p>
+              </div>
+              <div className="favorites__price"><p>{home.price} kr.</p></div>
               <button className="home__button favorites__button">Fjern Fra Favoritter</button>
           </li>
         ))}
