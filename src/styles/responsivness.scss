@@ -1,4 +1,4 @@
-#root{
+#root {
     display: grid;
     grid-template-columns: [fullw-start] 1.5rem [content-start] 1fr [content-end] 1.5rem [fullw-end];
 
@@ -12,151 +12,210 @@
     }
 
 
-.header__container{
-    background-color: #162A41;
-    padding: 1rem;
-    display: flex;
-    gap: 1rem;
-    color: white;
-    align-items: center;
-}
+    .header__container {
+        background-color: #162A41;
+        padding: 1rem;
+        display: flex;
+        gap: 1rem;
+        color: white;
+        align-items: center;
+    }
 
-// Family
-.family{
-grid-column: span 6;
-padding: 2.5rem;
-}
-.family__side{
-    grid-column: span 6;
-    padding: 2.5rem;
-}
+    // Family
+    .family {
+        grid-column: span 6;
+        padding: 2.5rem;
+    }
 
-.family__under-grid{
-    padding: 1rem;
-}
-.family__undergrid-section{
-    grid-column: span 4;
-    padding: 1rem;
-}
-// Chosen
-.chosen__card{
-    grid-column: span 6;
-}
-.chosen__figure{
-    height: 20rem;
-}
-// Agent
-.agent__container-home{
-    grid-column: span 4;
-    padding: 1rem;
-}
-// Footer
-.footer__section{
-    grid-column: span 6;
-}
-.footer__logo{
-    grid-column: span 6;
-}
-//List 
-.home__figure{
-    height: 15rem;
-}
-.home__li{
-    grid-column: span 6;
-    padding: 1rem;
-}
-//Detail
-.description__container{
-    grid-column: span 6;
-    padding: 2rem;
-}
-.logo__container{
-    margin: 2rem;
-}
-.home__info{
-    grid-column: span 4;
-    margin-inline: auto;
-}
-.home__info-top{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.home__info-logos{
-    padding: 2rem;
-}
-// Agentlist
-.agent__li{
-    grid-column: span 4;
-    padding: 1rem;
-}
-.agent__figure-list{
-    grid-column: span 4;
-}
+    .family__side {
+        grid-column: span 6;
+        padding: 2.5rem;
+    }
+
+    .family__under-grid {
+        padding: 1rem;
+    }
+
+    .family__undergrid-section {
+        grid-column: span 4;
+        padding: 1rem;
+    }
+
+    // Chosen
+    .chosen__card {
+        grid-column: span 6;
+    }
+
+    .chosen__figure {
+        height: 20rem;
+    }
+
+    // Agent
+    .agent__container-home {
+        grid-column: span 4;
+        padding: 1rem;
+    }
+
+    // Footer
+    .footer__section {
+        grid-column: span 6;
+    }
+
+    .footer__logo {
+        grid-column: span 6;
+    }
+
+    //List 
+    .home__figure {
+        height: 15rem;
+    }
+
+    .home__li {
+        grid-column: span 6;
+        padding: 1rem;
+    }
+
+    //Detail
+    .description__container {
+        grid-column: span 6;
+        padding: 2rem;
+    }
+
+    .logo__container {
+        margin: 2rem;
+    }
+
+    .home__info {
+        grid-column: span 4;
+        margin-inline: auto;
+    }
+
+    .home__info-top {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .home__info-logos {
+        padding: 2rem;
+    }
+
+    // Agentlist
+    .agent__li {
+        grid-column: span 4;
+        padding: 1rem;
+    }
+
+    .agent__figure-list {
+        grid-column: span 4;
+    }
 
 
-// // Agent
-.agent__figure-detail{
-    grid-column: span 4;
-    padding-top: 3rem;
-    padding-left: 3rem;
-}
+    // // Agent
+    .agent__figure-detail {
+        grid-column: span 4;
+        padding-top: 3rem;
+        padding-left: 3rem;
+    }
 
-.agent__container{
-    grid-column: span 8;
+    .agent__container {
+        grid-column: span 8;
 
+
+    }
+
+    .agent__section {
+        grid-column: span 4;
+        padding: 3rem;
+    }
+
+    .agent__description {
+        grid-column: span 8;
+        padding: 3rem;
+    }
+
+    .agent__contact {
+        grid-column: span 8;
+        padding-inline: 3rem;
+    }
+
+    .agent__contact-text {
+        grid-column: span 3;
+        padding: 1rem;
+    }
+
+    // Contact
+    .contact__form {
+        grid-column: span 8;
+        padding: 1rem;
+    }
+
+    .formgroup {
+        grid-column: span 8;
+
+    }
+
+    .contactinfo__container {
+        grid-column: span 5 / 15;
+    }
+
+    .contactinfo__section {
+        grid-column: span 4;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .login__title {
+        grid-column: span 4 / 9;
+    }
+
+    .login__title h1 {
+        text-align: center;
+    }
+
+    .formgroup__login {
+        grid-column: span 5 / 9;
+    }
+
+    .login__button {
+        grid-column: span 5 / 9;
+    }
+
+    //Favorites
+    .favorites__li {
+        grid-column: span 12;
+        display: grid;
+        grid-template-columns: subgrid;
+        grid-template-rows: auto auto;
+        border: 1px solid black;
+        padding: 2rem;
+    }
+
+    .favorites__figure {
+        grid-column: span 3;
+        height: 7.5rem;
+        grid-row: 1 / -1;
+    }
     
-}
-.agent__section{
-    grid-column: span 4;
-    padding: 3rem;
-}
-.agent__description{
-    grid-column: span 8;
-    padding: 3rem;
-}
-.agent__contact{
-    grid-column: span 8;
-    padding-inline: 3rem;
-}
-.agent__contact-text{
-    grid-column: span 3;
-    padding: 1rem;
-}
-// Contact
-.contact__form{
-    grid-column: span 8;
-    padding: 1rem;
-}
-.formgroup{
-    grid-column: span 8;
-    
-}
-.contactinfo__container{
-    grid-column: span 5 / 15;
-}
-.contactinfo__section{
-    grid-column: span 4;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.login__title{
-    grid-column: span 4 / 9;
-}
-.login__title h1{
-    text-align: center;
-}
-.formgroup__login{
-    grid-column: span 5 / 9;
-}
-.login__button{
-    grid-column: span 5 / 9;
-}
+    .favorites__info {
+        grid-column: span 2;
+        grid-row: 1 / -1
+    }
+    .favorites__info p{
+        padding-bottom: 0.5rem;
+    }
+    .favorites__button{
+        grid-row-start: 2;
+        grid-column: -1 / -5;
+        justify-self: end;
+    }
 }
 
-#root > header, #root > main, #root > footer{
+#root>header,
+#root>main,
+#root>footer {
     grid-column: fullw;
     display: grid;
     grid-template-columns: subgrid;
@@ -179,7 +238,7 @@ footer>* {
     grid-template-columns: subgrid;
 }
 
-.full-width{
+.full-width {
     grid-column: fullw-start / fullw-end;
 
 }
