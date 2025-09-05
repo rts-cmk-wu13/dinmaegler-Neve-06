@@ -3,6 +3,8 @@ import {
   Link,
   useRouteError,
 } from "react-router";
+import Header from "./Header";
+import Footer from "./Footer";
 
 export function ErrorBoundary() {
   const error = useRouteError();
@@ -18,13 +20,16 @@ export function ErrorBoundary() {
     );
   } else if (error instanceof Error) {
     return (
+      <>
+      <Header />
       <div>
-        <h1>Error</h1>
+        <h1>Du er havnet på en side som ikke findes! </h1>
         <p>{error.message}</p>
-        <p>De relevante folk har fået besked.</p>
-        <Link to="/">Gå til forsiden</Link>
-        
+        <p>Det er vi kede af! Vi har sendt en besked af sted til vores internetbureau, og bedt dem se på fejlen.</p>
+        <Link to="/"><button className="home__button">Gå til forsiden</button></Link>
       </div>
+      <Footer/>
+      </>
     );
   } else {
     return <h1>Unknown Error</h1>;

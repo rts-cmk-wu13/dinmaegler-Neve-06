@@ -1,6 +1,7 @@
 import { Form, useLocation, useNavigate } from "react-router"
 import { useAuth } from "../contexts/AuthContext"
 import { useState } from "react";
+import Header from "../Components/Header";
 import "./contact.scss"
 
 export default function Login() {
@@ -45,6 +46,7 @@ export default function Login() {
 
     return (
         <>
+        <Header/>
         <div>
             <h1 className="login__title">Log ind på din konto</h1>
         </div>
@@ -58,7 +60,7 @@ export default function Login() {
                 <input type="password" name="password" id="password" placeholder="Password" />
             </div>
             {error && (<div>{error}</div>)}
-            <button className="home__button" type="submit">Log in</button>
+            <button className="home__button login__button" type="submit">Log in</button>
         </Form>
         </>
     )

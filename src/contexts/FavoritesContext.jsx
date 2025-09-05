@@ -64,8 +64,16 @@ const toggleFavorite = (home) => {
   });
 };
 
+const removeFavorite = (homeId) => {
+  setFavorites((prev) => {
+    const updated = prev.filter((h) => h.id !== homeId);
+    syncFavorites(updated);
+    return updated;
+  });
+};
+
   return (
-    <FavoritesContext.Provider value={{ favorites, toggleFavorite }}>
+    <FavoritesContext.Provider value={{ favorites, toggleFavorite, removeFavorite }}>
       {children}
     </FavoritesContext.Provider>
   );

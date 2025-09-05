@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"; // ✅ required for <Link>
 import banner from "../img/banner.png"
 
 export default function Favorite() {
-  const { favorites } = useFavorites();
+  const { favorites, removeFavorite } = useFavorites();
 
   if (favorites.length === 0) {
     return <p className="">Ingen favoritter endnu ❤️</p>;
@@ -27,11 +27,19 @@ export default function Favorite() {
               </div>
               <div  className="favorites__details">
                 <p>{home.energylabel}</p>
-                <p>{home.rooms}</p>
-                <p>{home.size}m^2</p>
+                <p>{home.rooms} værelser</p>
+                <p>{home.lotsize} m^2</p>
               </div>
               <div className="favorites__price"><p>{home.price} kr.</p></div>
-              <button className="home__button favorites__button">Fjern Fra Favoritter</button>
+
+
+              <button className="home__button favorites__button" onClick={(e) =>
+                {e.preventDefault();
+                  e.stopPropagation();
+                  removeFavorite(home.id);}
+              }>Fjern Fra Favoritter</button>
+
+
           </li>
         ))}
       </ul>
